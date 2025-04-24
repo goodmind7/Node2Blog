@@ -10,16 +10,18 @@
   "private": true,
   "engines": {
     "node": "0.10.x",
-    "npm":  "1.1.x"
+    "npm": "1.1.x"
   },
   "scripts": {
     "start": "node blog"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "3.0.0rc5",
+    "express-async-handler": "^1.2.0",
     "jade": "0.28.2",
-    "mongoose":"3.6.5",
-    "mongodb":"1.2.14",
-    "rss":"0.0.4"
+    "mongodb": "1.2.14",
+    "mongoose": "3.6.5",
+    "rss": "0.0.4"
   }
 }
