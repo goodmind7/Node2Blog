@@ -1,16 +1,16 @@
 //PREREQUISITES
 var mongoose = require('mongoose')
-var Schema = mongoose.Schema
-    ,ObjectId = Schema.ObjectId;
+var Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
 
 
 //process.env.MONGOHQ_URL is for deploying on heroku
 //node2blog can be changed to whatever you want your local database to be called i.e. 'my database'
-var db_url = process.env.MONGOHQ_URL || "mongodb://localhost:27017/node2blog", 
-    db = mongoose.connect(db_url);
+//var db_url = process.env.MONGODB_URI || "mongodb://localhost:27017/node2blog", 
+    db = mongoose.connect("mongodb://localhost:27017/node2blog");
+
 
 //The MongoDB Schema for your posts
-
 var postSchema = new Schema({
     id: ObjectId,
     title: { type: String },
